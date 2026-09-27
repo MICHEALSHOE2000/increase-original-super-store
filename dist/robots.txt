@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://increase-original-super-store.vercel.app/sitemap.xml
