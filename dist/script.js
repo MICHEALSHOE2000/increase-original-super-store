@@ -553,7 +553,7 @@ function productCard(product) {
   return `
     <article class="product-card" data-product-id="${product.id}" tabindex="0" role="button" aria-label="View ${product.name} details">
       <div class="product-media">
-        <img class="${product.image.includes("images/classic/") ? "product-image-contain" : ""}" src="${product.image}" alt="${product.name} available from Increase Original Super Store" loading="lazy">
+        <img class="${product.image.includes("images/classic/") ? "product-image-contain" : ""}" src="${product.image}" alt="${product.name} available from Increase Original Super Store" loading="lazy" decoding="async">
         <span class="product-tag">${product.tag}</span>
       </div>
       <div class="product-body">
