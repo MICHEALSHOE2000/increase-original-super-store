@@ -4,6 +4,24 @@ const PAGE_SIZE = 8;
 
 const products = [
   {
+  "id": "iphone-18-pro-max",
+  "name": "iPhone 18 Pro Max",
+  "brand": "Apple",
+  "collection": "iPhone",
+  "tag": "Pro Max",
+  "image": "https://www.apple.com/newsroom/images/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/geo/Apple-iPhone-18-Pro-2up-Geo-260909_inline.jpg.large.jpg",
+  "description": "A20 Pro with a 6.9-inch display. Confirm current stock, storage, colours and price."
+},
+  {
+  "id": "iphone-18-pro",
+  "name": "iPhone 18 Pro",
+  "brand": "Apple",
+  "collection": "iPhone",
+  "tag": "Pro",
+  "image": "https://www.apple.com/newsroom/images/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/article/Apple-iPhone-18-Pro-color-lineup-260909_big.jpg.large.jpg",
+  "description": "A20 Pro with a 6.3-inch display. Confirm current stock, storage, colours and price."
+},
+  {
     id: "iphone-17-pro-max",
     name: "iPhone 17 Pro Max",
     brand: "Apple",
