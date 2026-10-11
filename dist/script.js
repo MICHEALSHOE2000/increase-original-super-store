@@ -630,6 +630,14 @@ function openProduct(id) {
   document.querySelector("#dialogTitle").textContent = product.name;
   document.querySelector("#dialogDescription").textContent = product.description;
   document.querySelector("#dialogWhatsApp").href = whatsappUrl(product.name);
+  if (typeof window.fbq === "function") {
+    window.fbq("track", "ViewContent", {
+      content_ids: [product.id],
+      content_type: "product",
+      content_name: product.name,
+      content_category: product.collection
+    });
+  }
   productDialog.showModal();
   document.body.style.overflow = "hidden";
 }
@@ -644,10 +652,18 @@ filterTabs.addEventListener("click", (event) => {
   if (button) setFilter(button.dataset.filter);
 });
 
+let searchEventTimer;
 searchInput.addEventListener("input", () => {
   state.query = searchInput.value;
   state.visible = PAGE_SIZE;
   renderProducts();
+  window.clearTimeout(searchEventTimer);
+  const searchTerm = state.query.trim();
+  if (searchTerm && typeof window.fbq === "function") {
+    searchEventTimer = window.setTimeout(() => {
+      window.fbq("track", "Search", { search_string: searchTerm });
+    }, 600);
+  }
 });
 
 loadMoreButton.addEventListener("click", () => {
